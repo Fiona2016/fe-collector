@@ -1,5 +1,6 @@
-### 9.18
-1. https://react.dev/learn/responding-to-events 事件系统，基础知识复习
+### 9.22
+1. https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e 可视化说明useState原理
+
 
 ### 9.19
 1. https://react.dev/learn/state-a-components-memory
@@ -33,8 +34,11 @@ const useState = (initialState: unknown): [unknown, (nextState: unknown) => void
    * 可以计算得出的state不要重复赋值，如firstName + lastName = fullName的情况
    * 如果有互斥的状态，可以考虑通过状态机来维护而不是通过两个状态的设置来判断，如 isSending, isSent
    * props传入的属性，不需要通过state再次维护。除非仅获取初始化，后续需要在当前组件自行维护。如initColor
+ 
+### 9.18
+1. https://react.dev/learn/responding-to-events 事件系统，基础知识复习
    * 不要重复维护数据，如有需要，可以维护id
    * <img width="475" height="242" alt="image" src="https://github.com/user-attachments/assets/a8d5732b-6b76-4d27-bd43-97a8ee6e8b2c" />
    * 避免使用深度嵌套，可以拍平数据，通过childId来进行关联
-   * 
+  
 
