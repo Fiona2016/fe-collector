@@ -1,3 +1,6 @@
+### 9.23
+1. https://react.dev/learn/render-and-commit react的渲染流程，整体分为三步：trigger, render, commit。trigger一般来源于组件初始化和state变化；render时，首次创建dom，后续会按需更新； commit将dom的变化提交给browser
+
 ### 9.22
 1. https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e 可视化说明useState原理
 
