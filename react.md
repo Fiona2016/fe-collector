@@ -1,3 +1,27 @@
+### 9.24
+1. https://react.dev/learn/state-as-a-snapshot 深入了解state。
+``` js
+const [number, setNumber] = useState(0);
+<button onClick={() => {
+  setNumber(number + 1);
+  setNumber(number + 1);
+  setNumber(number + 1);
+}}>+3</button>
+
+<button onClick={() => {
+        setNumber(number + 5);
+        setTimeout(() => {
+          alert(number); // 这里number依然是
+        }, 3000);
+      }}>+5</button>
+```
+对于这个代码来说，由于number在同一个渲染周期始终为InititalValue -> 0， 那么setNumber 执行三遍，number不会从0变成3.而是重复三遍0 -> 1.
+setTimeout中的number也依然是0.
+
+<b>A state variable’s value never changes within a render, even if its event handler’s code is asynchronous.</b>
+React 中，每个渲染周期的状态都是 “快照”，一旦生成就不会在该周期内改变，哪怕执行了 setState 或异步操作
+
+
 ### 9.23
 1. https://react.dev/learn/render-and-commit react的渲染流程，整体分为三步：trigger, render, commit。trigger一般来源于组件初始化和state变化；render时，首次创建dom，后续会按需更新； commit将dom的变化提交给browser
 
