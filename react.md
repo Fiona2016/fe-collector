@@ -1,3 +1,39 @@
+### 9.25
+1. https://react.dev/learn/queueing-a-series-of-state-update 
+```
+import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    <>
+      <h1>{number}</h1>
+      <button onClick={() => {
+        setNumber(number + 5);
+        setNumber(n => n + 1);
+        setNumber(42);
+      }}>Increase the number</button>
+    </>
+  )
+}
+```
+这篇主要讲batchUpdate，对于setState操作，会等页面上的事件触发完毕后，再进行rerender提升性能。这个称之为batching.
+如果在setState的时候传入的是一个function，则会将该function放入一个queue依次执行，每次执行前获取到的数据是当前的state。看下面这个例子，n会从0 => 3.
+```
+setNumber(n => n + 1);
+setNumber(n => n + 1);
+setNumber(n => n + 1);
+
+```
+
+PS: 这里的challenge挺适合作为面试题考察基础。
+
+
+问题
+1. 批量rerender的规则和时机是什么？
+2. 
+
 ### 9.24
 1. https://react.dev/learn/state-as-a-snapshot 深入了解state。
 ``` js
