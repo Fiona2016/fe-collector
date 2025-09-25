@@ -28,11 +28,19 @@ setNumber(n => n + 1);
 ```
 
 PS: 这里的challenge挺适合作为面试题考察基础。
+challenge2的实现。
 
+```
+export function getFinalState(baseState, queue) {
+  return queue.reduce((prev, cur) => (typeof cur  === 'function' ? cur(prev): cur), baseState)
+}
+```
 
 问题
-1. 批量rerender的规则和时机是什么？
-2. 
+1. 批处理rerender的规则和时机是什么？
+   在一个回调中，同步触发的setState会在event回调结束后批量执行并执行rerender. 对于异步的场景，会将setState添加到异步队列，在异步执行时，也会将异步里的代码批量执行后触发一次rerender。
+   本质上是希望通过多个setState的执行减少rerender次数。
+
 
 ### 9.24
 1. https://react.dev/learn/state-as-a-snapshot 深入了解state。
