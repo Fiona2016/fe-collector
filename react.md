@@ -1,3 +1,10 @@
+### 9.26
+1. https://react.dev/learn/updating-objects-in-state
+
+   1. treat state as ready-only, 对于对象类型的state，每次使用新的对象直接替换而不是修改原对象的值。
+   2. 可以通过https://github.com/immerjs/use-immer 来实现对嵌套对象里的深度属性进行修改。其原理是通过proxy监听变化key值，重新创建一个新的对象替换原来的。
+
+   
 ### 9.25
 1. https://react.dev/learn/queueing-a-series-of-state-update 
 ```
