@@ -1,3 +1,11 @@
+### 9.28
+1. https://react.dev/learn/updating-arrays-in-state 如object一样，array类型的数据也建议当做不可变对象来处理。
+   1. array的“可变”操作：push(),pop(), "不可变"操作：filter(),map()
+   2. 注意slice和splice区别。slice会复制array的一部分，splice会修改array（新增或者删除）
+   3. 常用的增删改查的映射关系。push -> ..., splice -> slice, pop -> filter, modify -> ...; 或者使用useImmer实现。
+<img width="814" height="288" alt="image" src="https://github.com/user-attachments/assets/214a71df-e998-452e-822e-819e4e51150f" />
+2. 
+
 ### 9.26
 1. https://react.dev/learn/updating-objects-in-state
 
