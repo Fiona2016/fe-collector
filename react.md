@@ -1,3 +1,6 @@
+### 9.29 
+1. https://react.dev/learn/reacting-to-input-with-state 通过state描述式生成组件而不是命令式生成组件
+
 ### 9.28
 1. https://react.dev/learn/updating-arrays-in-state 如object一样，array类型的数据也建议当做不可变对象来处理。
    1. array的“可变”操作：push(),pop(), "不可变"操作：filter(),map()
