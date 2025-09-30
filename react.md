@@ -1,3 +1,10 @@
+### 9.30
+1. https://react.dev/learn/choosing-the-state-structure 关于如何构造state的一些原则和建议
+   * 总是一起出现，合并成一个数据 -> x, y -> [x，y]
+   * 不同时维护语义相反的数据 -> isSent, isSending -> state: sending, sent
+   * 不维护多余的数据 -> firstName, lastName, fullName(×) -> fullName = firstName + lastName
+   * 不维护重复数据 -> items, selectedItem(×) -> selectedId
+   * 避免深度嵌套 -> {x: {y: {z: 1}}} -> {z: {prop: 1, parent: y}}
 ### 9.29 
 1. https://react.dev/learn/reacting-to-input-with-state 通过state描述式生成组件而不是命令式生成组件
 
