@@ -1,3 +1,9 @@
+### 10.9
+1. https://react.dev/learn/sharing-state-between-components
+* 本篇讨论在React中，组件之间如何共享状态。受控组件与非受控组件，指的是所需要控制的状态，是通过父组件传入props进行控制(受控组件)还是组件内部通过state进行维护(非受控组件)。这是从整体视角来看的。受控组件扩展性更强，但需要父组件需维护更多配置。
+* 对于state在哪里维护没有统一标准，建议遵循"single of truth"，在哪里配置能够保证全局是唯一的、可信的数据源，那就在哪里维护。
+
+
 ### 9.30
 1. https://react.dev/learn/choosing-the-state-structure 关于如何构造state的一些原则和建议
    * 总是一起出现，合并成一个数据 -> x, y -> [x，y]
