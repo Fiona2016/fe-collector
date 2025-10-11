@@ -1,3 +1,57 @@
+### 10.11
+1. https://react.dev/learn/extracting-state-logic-into-a-reducer
+useReducer hook，和array的reduce方法是类似的。通过定义一个函数，保留一个state状态，并在每次通过操作的action决定next state返回什么
+下面的代码很有趣。
+```js
+import tasksReducer from './tasksReducer.js';
+
+let initialState = [];
+let actions = [
+  {type: 'added', id: 1, text: 'Visit Kafka Museum'},
+  {type: 'added', id: 2, text: 'Watch a puppet show'},
+  {type: 'deleted', id: 1},
+  {type: 'added', id: 3, text: 'Lennon Wall pic'},
+];
+
+let finalState = actions.reduce(tasksReducer, initialState);
+
+const output = document.getElementById('output');
+output.textContent = JSON.stringify(finalState, null, 2);
+```
+在看初始化语句
+```
+const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
+```
+在初始化时，通过对useReducer的调用，将reducer和initState传入。返回的disptch方法，是后续进行reduce操作的触发器。这个function在被调用时，其接收到的对象是一个“变更”，reducer内部维护的state + 本次变更，会产生一个新的state。这个新的state变化时，组件会重新渲染。类似useState, 组件重新渲染时，会获取到当前index hook所对应的值进行render。
+
+一个Reducer，其实是维护了数据 + 变更。每次变更发起时，newState = State + Mutation -> 触发重新渲染。
+
+什么时候适合使用useReducer而不是useState呢？ 
+* 对state的操作很多，很重，且有重复？
+* 逻辑梳理，相同于对state的变更进行了分类
+* 每次对state的操作由dispatch触发，可以更好的观察state的变化，也会更容易debug
+
+useReducer的最佳实践
+* 纯函数，无副作用
+* 和交互保持一致。
+
+useReducer的实现
+```
+import { useState } from 'react';
+
+export function useReducer(reducer, initialState) {
+  const [state, setState] = useState(initialState);
+
+  const dispatch = (mutation) => {
+    setState(state => reducer(state, mutation))
+  }
+
+  return [state, dispatch];
+}
+```
+
+
+
 ### 10.10
 1. https://react.dev/learn/preserving-and-resetting-state（重点）
 React 在渲染UI时，会记录每个component的位置，并通过state进行初始化。如果识别出在相同的位置渲染了相同的组件，则会保留对应的state。
