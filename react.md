@@ -1,3 +1,20 @@
+### 10.13
+1. https://react.dev/learn/passing-data-deeply-with-context
+本文讲述context的使用，可以支持跨组件进行数据传递。在顶层配置一个数据源，子组件均继承该数据源。
+* store关注的是数据层的托管
+* context会通过provider和useContext来定义一个松散的页面组织结构。有个特性是适应环境，意味着不管这个组件的位置如何改变，其用于展示的规则都会进行相应的适配（level场景）
+* 类比于css的属性，会对子dom生效。子组件设置的属性优先级会更好(可以覆盖写入)；不同层级设定的不同属性彼此不会覆盖干扰。
+* 什么情况下不应该使用context?
+  * props传递较繁琐
+  * 考虑是否可以通过直接抽取中间组件作为children进行传递？
+* 使用场景
+  * 主题
+  * 当前账号
+  * 路由
+  * app级别的一些元信息
+  
+
+
 ### 10.11
 1. https://react.dev/learn/extracting-state-logic-into-a-reducer
 useReducer hook，和array的reduce方法是类似的。通过定义一个函数，保留一个state状态，并在每次通过操作的action决定next state返回什么
