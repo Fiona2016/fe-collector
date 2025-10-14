@@ -1,3 +1,16 @@
+### 10.14
+https://react.dev/learn/scaling-up-with-reducer-and-context
+
+可以通过context + reducer 将组件进行合理分层。
+* Data: Context，获取数据后存在context供子组件进行获取
+* Logic-数据相关: reducer控制
+* Logic-UI相关：在组件中控制
+* UI：组件控制
+对于针对特性场景的复杂业务组件可以采用这种架构模式。
+好处是数据和展示分离，代码结构更清晰。
+副作用是形成的“组件群”之间耦合会比较严重。对于子组件来说，依赖provider，相当于和Root组件有一条线关联起来了，不好复用于其他场景。
+
+
 ### 10.13
 1. https://react.dev/learn/passing-data-deeply-with-context
 本文讲述context的使用，可以支持跨组件进行数据传递。在顶层配置一个数据源，子组件均继承该数据源。
