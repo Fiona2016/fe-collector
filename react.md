@@ -1,5 +1,5 @@
 ### 10.14
-https://react.dev/learn/scaling-up-with-reducer-and-context
+https://react.dev/learn/scaling-up-with-reducer-and-context （重点）
 
 可以通过context + reducer 将组件进行合理分层。
 * Data: Context，获取数据后存在context供子组件进行获取
