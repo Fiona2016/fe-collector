@@ -1,5 +1,5 @@
 ### 10.15
-1. https://react.dev/learn/referencing-values-with-refs
+1. https://react.dev/learn/referencing-values-with-refs （重要）
 
 在使用state时，有时某些变量不需要参与render，但需要获取它的动态值，可以使用useRef。useRef的设置不会触发重新渲染，在获取值的时候也会获取实时的值而不是某个state tree的快照。
 
