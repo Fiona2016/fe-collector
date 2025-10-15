@@ -1,3 +1,58 @@
+### 10.15
+1. https://react.dev/learn/referencing-values-with-refs
+
+在使用state时，有时某些变量不需要参与render，但需要获取它的动态值，可以使用useRef。useRef的设置不会触发重新渲染，在获取值的时候也会获取实时的值而不是某个state tree的快照。
+
+* 使用原则
+如何区分何时使用state，何时使用ref呢？ <b>与 UI 无关但要跨渲染保存</b>
+
+* 原理？
+useRef的实现是维护一个useState变量，这个变量是个对象。直接修改ref.current，对象本身的引用不会发生变化。所以返回的ref，每次都能通过.current获取到最新的数据。
+也正是因为ref的值不会发生变化，所以setter没有必要返回。
+```
+// Inside of React
+function useRef(initialValue) {
+  const [ref, unused] = useState({ current: initialValue });
+  return ref;
+}
+```
+
+* when to use
+  - timer
+  - dom引用
+  - 与jsx渲染无关的变量
+
+ps: 每个组件的ref只会初始化一次，如果不显示修改ref.current， ref始终是稳定的。下面的代码在send中无法获取到最新值，需要修改input的onChange函数才可以。思考下why
+```js
+import { useState, useRef } from 'react';
+
+export default function Chat() {
+  const [text, setText] = useState('');
+  const testRef  = useRef(text);
+
+  function handleSend() {
+    setTimeout(() => {
+      alert('Sending: ' + testRef.current);
+    }, 3000);
+  }
+
+  return (
+    <>
+      <input
+        value={text}
+        onChange={e => setText(e.target.value)}
+      />
+      <button
+        onClick={handleSend}>
+        Send
+      </button>
+    </>
+  );
+}
+
+```
+
+
 ### 10.14
 https://react.dev/learn/scaling-up-with-reducer-and-context （重点）
 
