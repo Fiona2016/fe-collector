@@ -1,3 +1,8 @@
+### 10.20
+1. https://react.dev/learn/manipulating-the-dom-with-refs
+- useRef也可以是一个对象，不一定必须是dom
+- 采用 useImperativeHandle 来限制ref对象的访问方法
+
 ### 10.15
 1. https://react.dev/learn/referencing-values-with-refs （重要）
 
