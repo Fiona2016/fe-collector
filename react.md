@@ -1,3 +1,9 @@
+### 10.23
+1. https://react.dev/learn/synchronizing-with-effects
+
+- 当组件已经渲染完毕后，需要额外进行函数调用时，使用effect？
+- 需要关注Strict Mode 参数，development会渲染两次
+
 ### 10.20
 1. https://react.dev/learn/manipulating-the-dom-with-refs
 - useRef也可以是一个对象，不一定必须是dom
