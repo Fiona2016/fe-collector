@@ -3,6 +3,7 @@
 
 - 当组件已经渲染完毕后，需要额外进行函数调用时，使用effect？
 - 需要关注Strict Mode 参数，development会渲染两次
+- 对于异步请求如何处理？可以添加一个标志位，ignore，在接口返回时对比标志位。如果ignore是true，则不再执行后续操作。 (这里是否有现成的封装方法？)
 
 ### 10.20
 1. https://react.dev/learn/manipulating-the-dom-with-refs
