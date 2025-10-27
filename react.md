@@ -1,3 +1,11 @@
+### 10.27
+https://react.dev/learn/lifecycle-of-reactive-effects
+* 对于react组件来说，有mount, update, unmount这些生命周期。而effect只有sync和destroy两种状态。
+* 从组件的视角来看，可能会将effect视作callback，如afterRenderCB和beforeUnMountCB，事实上， 尽量不要从组件的视角上看，不要依赖组件的生命周期，effect可能被多次启动和停止。
+* 可以在deps添加依赖项，当依赖项发生变化时，会重新执行停止和启动的过程。不同的依赖项不要“杂糅”在一起，尽量剥离开。
+* 哪些数据不可以作为依赖: location.path, ref.current（只一个可变容器，无法追踪?）
+* 
+
 ### 10.23
 1. https://react.dev/learn/synchronizing-with-effects
 
