@@ -1,3 +1,9 @@
+### 10.28
+https://react.dev/learn/separating-events-from-effects
+* 首先需要区分eventHandler和Effect。前者侧重于交互，是行为驱动；后者侧是数据驱动。
+* 有个场景是需要在Effect里面列出dependency，但有些denpendency只是需要在effect里面读取数据，并不需要因为该数据的变化而重新开启一次effect。(如Connect里面的Effect可能有notify的功能，其需要感知theme弹出对应的对话框。但是theme的变化不应该引起reconnect）这种场景下，可以使用useEffectEvent来实现
+* 该hook只能被Effect进行调用，在函数中可以读取state和prop的最新值。
+
 ### 10.27
 https://react.dev/learn/lifecycle-of-reactive-effects
 * 对于react组件来说，有mount, update, unmount这些生命周期。而effect只有sync和destroy两种状态。
