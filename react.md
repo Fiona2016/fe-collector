@@ -1,5 +1,14 @@
+### 10.29
+https://react.dev/learn/removing-effect-dependencies
+* 本篇讨论哪些情况下需要考虑去掉依赖。
+  * 对应的依赖，是不是可以抽取成独立事件？可使用effectEvent进行抽取
+  * 是否有一些不相关的依赖？可以去除或者进行拆分
+  * 如果有些值的读取是为了set值进行处理，可以通过setState(prev => fn())的方式在setState中获取并修改
+  * 对于依赖中有function的情况，每次渲染时funtion都会变化，可以通过useEffectEvent抽取方法，在方法中引用对应的function即可
+  * 如果依赖的是一个function或者object，每次parent components渲染时该prop都会发生变化
+
 ### 10.28
-https://react.dev/learn/separating-events-from-effects
+https://react.dev/learn/separating-events-from-effects(重要)
 * 首先需要区分eventHandler和Effect。前者侧重于交互，是行为驱动；后者侧是数据驱动。
 * 有个场景是需要在Effect里面列出dependency，但有些denpendency只是需要在effect里面读取数据，并不需要因为该数据的变化而重新开启一次effect。(如Connect里面的Effect可能有notify的功能，其需要感知theme弹出对应的对话框。但是theme的变化不应该引起reconnect）这种场景下，可以使用useEffectEvent来实现
 * 该hook只能被Effect进行调用，在函数中可以读取state和prop的最新值。
