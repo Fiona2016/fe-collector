@@ -6,6 +6,7 @@ https://react.dev/learn/reusing-logic-with-custom-hooks
 * hook命名以use开头，不可用于条件渲染
 * useEffect，说明脱离了react的边界，此时可以考虑useEffect的内容，能否抽取为独立hook方便后续复用
 * 抽取hook时，该hook可能只是react与”外部系统“之间的桥梁。由hook来定义如何桥接，那自定义的逻辑，也可以抽取成class
+* （最后一题挺好，适合面试）
 
 ### 10.29
 https://react.dev/learn/removing-effect-dependencies
