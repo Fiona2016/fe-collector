@@ -1,3 +1,10 @@
+### 11.3
+开始学习第二遍。
+
+https://react.dev/learn/your-first-component 本篇讲述什么是React中的组件。
+* 组件存在的最主要的目的是复用
+* React通过大写来区分html原生标签和React自定义组件
+
 ### 10.30
 https://react.dev/learn/reusing-logic-with-custom-hooks
 
