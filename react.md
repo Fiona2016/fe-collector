@@ -1,3 +1,13 @@
+### 11.5
+https://react.dev/learn/reusing-logic-with-custom-hooks 再读一遍。
+* hook是react与”外部系统“之间的桥梁。
+* 在抽取hook时，也就指定了应用的边界。
+* 使用Effect写法，关注的是过程，useEffect将其抽取后，主流程关注的是意图的实现。
+
+https://react.dev/reference/react/useSyncExternalStore 
+对于外部系统状态的获取可以使用useExternalStore hook。适用于从外部 store 获取最新快照的场景
+
+
 ### 11.4
 [https://react.dev/learn/conditional-rendering ](https://react.dev/learn/passing-props-to-a-component)
 
