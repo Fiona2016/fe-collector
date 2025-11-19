@@ -1,3 +1,9 @@
+### 11.19
+https://react.dev/reference/react/Activity
+19.2 发布的activity特性。将activity进行包裹时，可用于Prerender和keepalive的场景。原理是该标签下的react virtual dom会响应state。
+
+
+
 ### 11.5
 https://react.dev/learn/reusing-logic-with-custom-hooks 再读一遍。
 * hook是react与”外部系统“之间的桥梁。
