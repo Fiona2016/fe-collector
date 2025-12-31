@@ -1,3 +1,9 @@
+### 12.30
+https://mp.weixin.qq.com/s/xInB5TRU3iESKdkqQQ6qAg 
+- 技术债在 AI 眼里并不是“债”，只是更多的代码而已。
+- 开发人员还是需要作为第一责任人来负责代码的生成。
+
+
 ### 12.9
 1. b23.tv/tOHOcn4 gemini生成网页，capacitor框架可以支持跨端，思路是生成app，通过webview加载网页。
 ### 2025
