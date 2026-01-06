@@ -1,3 +1,6 @@
+### 12.6
+[https://react.dev/reference/react/useActionState ](https://react.dev/reference/react/useEffectEvent) 在useEffect中可以同步state状态
+
 ### 11.19
 https://react.dev/reference/react/Activity
 19.2 发布的activity特性。将activity进行包裹时，可用于Prerender和keepalive的场景。原理是该标签下的react virtual dom会响应state。
