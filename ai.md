@@ -1,3 +1,23 @@
+### 2.2
+https://huggingface.co/learn/agents-course/unit1/agent-steps-and-structure 
+AI Agent 三要素：
+- Thought 
+- Action
+- Observation
+
+首先进行思考和推理，根据问题分析需要调用的工具，通过action(tools, mcp, skill)等进行处理，并监听结果。得到结果后再发起第二轮思考。直到observation得到了结果。
+这个循环叫做ReAct。
+
+QA
+1. think是使用的LLM的能力吗？
+    是的。think，一般的流程是将query + system context 发送给LLM，让其返回下一步需要执行的action。
+3. observation是一个异步监听吗？观测了什么？ 
+   不是。一般情况下指的是调用action得到的结果。为什么不叫result？
+   - ReAct 的核心创新之一就是：action 让模型接触外部真实世界，observation 再把外部信息带回来帮助模型继续 reasoning。
+   - 这里的observation观测到的内容，是每一步得到的中间态产物，不是最终结果。Observation 是因为它最准确地描述了“外部环境对我 action 的客观回应”，
+
+
+
 ### 12.30
 https://mp.weixin.qq.com/s/xInB5TRU3iESKdkqQQ6qAg 
 - 技术债在 AI 眼里并不是“债”，只是更多的代码而已。
