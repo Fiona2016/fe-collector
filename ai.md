@@ -1,3 +1,22 @@
+### 2.2
+https://huggingface.co/learn/agents-course/en/unit1/actions 
+这篇文章介绍了Action的一些说明，有点不太好理解。这里简单介绍一下整个Agent的工作流程方便理解其内容。
+首先有个前置条件，LLM是无记忆的。它自身不会存储上下文，每次的对话，其实是system prompt + 用户输入 + 循环（LLM思考 + agent调用actions得到的结果） + final answer进行持续接力的结果。
+
+感觉到困惑的几个讨论点如下：
+Agent在调用LLM时，会预期希望其能够在明确有Action调用的情况下，结束输出，保证其能够在Action调用的地方停下来，让Agent来接管控制权，然后执行对应的tools或者LLM生成的代码，得到结果之后返回observation， LLM再继续思考迭代。
+1. 假设没有stop的能力，LLM会在Action输出之后继续"胡言乱语", 对于Agent来说，如何正确感知到对应的结束token并获取到actions会是技术挑战，多轮对话下来可能会不好调试，也不稳定。
+2. 保证stop这件事情现在有点矛盾，本来是LLM应该保证的事情，现在是需要Agent来指定stop sequence，有点别扭，2026年大部分模型都能在90%以上的场景对于actions场景stop
+3. 如果每次遇到action调用，模型就停下来，然后再进行下一轮的调用，这样会造成token的浪费和执行时间的浪费。现在的优化做法
+   - 让LLM充分思考，可以输出多个Actions供Agent批量并行调用并给到结果
+   - 让LLM先进行plan，给出plan和里面的actions， Agent对plan里面的actions进行执行
+   
+<img width="797" height="570" alt="image" src="https://github.com/user-attachments/assets/78ac9513-8c5f-4c0a-b547-5b2a2a0f1355" />
+
+
+
+
+
 ### 2.2 
 https://huggingface.co/learn/agents-course/en/unit1/thoughts 
 对于thinking来说，有两种常见的模式。
