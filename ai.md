@@ -1,3 +1,8 @@
+### 2.11
+https://mp.weixin.qq.com/s/I_VpBEktknviXi1kWvt8GA 
+AI如何提升效能？如何进行度量？ 以千人团队的实践进行距离说明
+
+
 ### 2.2
 https://huggingface.co/learn/agents-course/en/unit1/actions 
 这篇文章介绍了Action的一些说明，有点不太好理解。这里简单介绍一下整个Agent的工作流程方便理解其内容。
