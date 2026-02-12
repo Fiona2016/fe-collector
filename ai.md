@@ -1,3 +1,8 @@
+### 2.12 
+https://mp.weixin.qq.com/s/y7J8jiN_B8pbEExHEpAjbg
+网页通过支持对WebMCP 的调用，可以协助AI 通过接口来获取网页需要传递的信息，有效节约token，而不必每次通过截图来确认dom情况。
+思考：目前snapshot主要用于识别和对齐样式，获取数据其实也可以通过读取dom来获得。针对样式调整的需求,web mcp是支持不了的。web mcp的场景也许适合于SEO? 可以方便快速获取当前网页信息？
+
 ### 2.11
 https://mp.weixin.qq.com/s/I_VpBEktknviXi1kWvt8GA 
 AI如何提升效能？如何进行度量？ 以千人团队的实践进行距离说明
