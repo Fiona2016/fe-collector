@@ -1,3 +1,8 @@
+### 2.16
+https://huggingface.co/learn/agents-course/en/unit2/smolagents/code_agents
+- Agent在take actions时，可以支持code模式(直接进行function run)，也可以支持Json模式（以json形式传入fn name + params）
+
+
 ### 2.12
 https://bytedance.larkoffice.com/wiki/A5RHwWhoBiOnjukIIw6cu5ybnXQ 
 seedance 2.0发布的产品说明文档，里面有很多case。目前视频生成主要解决的难点
