@@ -1,3 +1,7 @@
+### 2.17
+https://huggingface.co/learn/agents-course/en/unit2/smolagents/code_agents
+使用 smolagents框架来尝试创建一个code agent.
+
 ### 2.16
 https://huggingface.co/learn/agents-course/en/unit2/smolagents/code_agents
 - Agent在take actions时，可以支持code模式(直接进行function run)，也可以支持Json模式（以json形式传入fn name + params）
