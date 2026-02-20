@@ -1,3 +1,7 @@
+### 2.20
+https://mp.weixin.qq.com/s/zmdqp98Q3tmPFEc1zCkzkw 
+对openclaw的说明。
+
 ### 2.17
 https://huggingface.co/learn/agents-course/en/unit2/smolagents/code_agents
 使用 smolagents框架来尝试创建一个code agent.
