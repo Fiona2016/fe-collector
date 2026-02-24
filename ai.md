@@ -1,3 +1,5 @@
+### 2.24
+https://mp.weixin.qq.com/s/J8yt5E26mESum_N2zvCjow product hunt happycapy，在browser里的agent。
 ### 2.20
 https://mp.weixin.qq.com/s/zmdqp98Q3tmPFEc1zCkzkw 
 对openclaw的说明。
