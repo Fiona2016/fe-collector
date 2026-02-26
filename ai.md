@@ -1,3 +1,5 @@
+### 2.26
+https://mp.weixin.qq.com/s/MlSRM55_L_7SH96fSqHWMQ 对openclaw的说明，Openclaw的定位是一个网关，整个的实现架构分为三个部分，通道接入（支持telegram等），gateway接入与调度，AgentRunTime。
 ### 2.24
 https://mp.weixin.qq.com/s/J8yt5E26mESum_N2zvCjow product hunt happycapy，在browser里的agent。
 ### 2.20
