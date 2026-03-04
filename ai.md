@@ -7,7 +7,7 @@ LLM应用(如 Web Agent)如何做可观测
    * 底层原理：基于SSE 协议通信，实现方式
       * 浏览器原生 EventSource对象（不推荐）
          * 仅支持Get方法，不支持自定义header
-         * 接入rum: 自行生成trace_id, 通过url传递参数
+         * 接入rum: 自行生成trace_id, 通过url传递参数 或者cookie传递
       * http + readable stream（社区主流实现）
          * request header: accept: text/stream
          * 支持post put等方法，支持自定义header
