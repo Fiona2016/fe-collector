@@ -1,3 +1,33 @@
+### 3.4
+LLM应用(如 Web Agent)如何做可观测
+* UI
+   * 常用框架： 
+      * ag-ui https://github.com/ag-ui-protocol/ag-ui?tab=readme-ov-file
+      * open-webui: https://github.com/open-webui/open-webui
+   * 底层原理：基于SSE 协议通信，实现方式
+      * 浏览器原生 EventSource对象（不推荐）
+         * 仅支持Get方法，不支持自定义header
+         * 接入rum: 自行生成trace_id, 通过url传递参数
+      * http + readable stream（社区主流实现）
+         * request header: accept: text/stream
+         * 支持post put等方法，支持自定义header
+         * 接入RUM：自动接入
+* Agent
+   * MCP
+      * 调用方式
+         * stdio
+         * SSE
+      * 底层实现
+         * mcp server可控？
+            * 接收层_meta.trace，统一
+            * 内部接入otel内置sdk
+         * mcp server 不可控？
+            * wrapper 成可控
+            * client在调用前生成span, 调用结果返回后记录成功/失败结果和duration，更新span
+   * LLM调用
+      * openllmetry 基于otel协议接入采集
+      * langfuse 接收数据并存储，支持展示、交互、分析
+
 ### 2.26
 https://mp.weixin.qq.com/s/MlSRM55_L_7SH96fSqHWMQ 对openclaw的说明，Openclaw的定位是一个网关，整个的实现架构分为三个部分，通道接入（支持telegram等），gateway接入与调度，AgentRunTime。
 ### 2.24
