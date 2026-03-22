@@ -1,3 +1,8 @@
+### 3.22
+https://mp.weixin.qq.com/s/sVGeofV9uTgvhgR44q8pNA 
+Agent需要做的事情会越来越复杂。
+
+
 ### 3.11
 https://mp.weixin.qq.com/s/9Kpx7f-w65PdPxZJ6lwK9g 
 大模型如何进行记忆管理
