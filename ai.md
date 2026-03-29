@@ -1,6 +1,10 @@
 ### 3.29 https://openai.com/zh-Hans-CN/index/harness-engineering/ 
 harness工程。同样的LLM，在不同的工程环境下，可以有不同的表现。
 
+<img width="621" height="414" alt="image" src="https://github.com/user-attachments/assets/39a4e397-709c-44b4-ba06-2b886da94e9d" />
+
+
+
 ### 3.22
 https://mp.weixin.qq.com/s/sVGeofV9uTgvhgR44q8pNA 
 Agent需要做的事情会越来越复杂。
