@@ -1,3 +1,12 @@
+### 4.14
+cladue code 学习
+1. https://deepwiki.com/zackautocracy/claude-code/1-claude-code:-overview
+2. https://ccunpacked.dev/#agent-loop
+
+跟着源码从头实现一个agent
+https://github.com/Fiona2016/claude-code-from-scratch
+
+
 ### 3.29 https://openai.com/zh-Hans-CN/index/harness-engineering/ 
 harness工程。同样的LLM，在不同的工程环境下，可以有不同的表现。
 
