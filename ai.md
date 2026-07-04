@@ -1,3 +1,6 @@
+### 7.4
+https://x.com/lxfater/status/2073244694365274599?s=46 
+
 ### 5.23
 设计工具
 https://github.com/nexu-io/open-design
