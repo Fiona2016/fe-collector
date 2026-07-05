@@ -1,3 +1,6 @@
+### 7.5
+https://github.com/openai/codex-plugin-cc 在claude中使用codex
+
 ### 7.4
 https://x.com/lxfater/status/2073244694365274599?s=46 
 
